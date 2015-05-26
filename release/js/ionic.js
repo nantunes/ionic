@@ -7752,7 +7752,10 @@ ionic.scroll = {
           });
           self._dragOp.start(e);
           e.preventDefault();
-          self.isScrollFreeze = self.scrollView.freeze(true);
+
+          if (self.scrollView) {
+            self.isScrollFreeze = self.scrollView.freeze(true);
+          }
         }
       }
 
